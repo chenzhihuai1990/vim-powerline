@@ -4,6 +4,9 @@
 " Source repository: https://github.com/Lokaltog/vim-powerline
 
 " Script initialization {{{
+
+
+
 	if exists('g:Powerline_loaded') || &compatible || version < 702
 		finish
 	endif

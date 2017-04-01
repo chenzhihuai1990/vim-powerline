@@ -10,4 +10,7 @@ let g:Powerline#Matches#matches = {
 	\ 'minibufexplorer' : Pl#Match#Add('bufname(winbufnr(a:window))', '^\-MiniBufExplorer\-$'),
 	\ 'tagbar'          : Pl#Match#Add('getwinvar(a:window, "&ft")' , '^tagbar$'),
 	\ 'nerdtree'        : Pl#Match#Add('getwinvar(a:window, "&ft")' , '^nerdtree$'),
+	\ 'undotree_undo' : Pl#Match#Add('bufname(winbufnr(a:window))', '^undotree_2$'),
+	\ 'undotree_diff' : Pl#Match#Add('bufname(winbufnr(a:window))', '^diffpanel_3$'),
+	\ 'yankring' : Pl#Match#Add('bufname(winbufnr(a:window))', '^\[YankRing\]$'),
 \ }

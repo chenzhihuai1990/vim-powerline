@@ -4,18 +4,17 @@ let g:Powerline#Themes#default#theme = Pl#Theme#Create(
 		\ , 'mode_indicator'
 		\ , 'fugitive:branch'
 		\ , 'hgrev:branch'
+		\ , Pl#Segment#Truncate()
 		\ , 'fileinfo'
 		\ , 'syntastic:errors'
-		\ , Pl#Segment#Truncate()
-		\ , 'tagbar:currenttag'
 		\ , Pl#Segment#Split()
+		\ , 'tagbar:currenttag'
 		\ , 'rvm:string'
 		\ , 'virtualenv:statusline'
-		\ , 'fileformat'
-		\ , 'fileencoding'
 		\ , 'filetype'
 		\ , 'scrollpercent'
 		\ , 'lineinfo'
+        \ , 'whitespace:trailing'
 	\ ),
 	\
 	\ Pl#Theme#Buffer('command_t'
@@ -35,6 +34,20 @@ let g:Powerline#Themes#default#theme = Pl#Theme#Create(
 	\ Pl#Theme#Buffer('gundo', Pl#Match#Any('gundo_preview')
 		\ , ['static_str.name', 'Gundo']
 		\ , ['static_str.buffer', 'Diff preview']
+		\ , Pl#Segment#Truncate()
+		\ , Pl#Segment#Split()
+	\ ),
+	\
+	\ Pl#Theme#Buffer('undotree', Pl#Match#Any('undotree_undo')
+		\ , ['static_str.name', 'Undotree']
+		\ , ['static_str.buffer', 'History']
+		\ , Pl#Segment#Truncate()
+		\ , Pl#Segment#Split()
+	\ ),
+	\
+	\ Pl#Theme#Buffer('undotree', Pl#Match#Any('undotree_diff')
+		\ , ['static_str.name', 'Undotree']
+		\ , ['static_str.buffer', 'Diff']
 		\ , Pl#Segment#Truncate()
 		\ , Pl#Segment#Split()
 	\ ),
@@ -110,6 +123,12 @@ let g:Powerline#Themes#default#theme = Pl#Theme#Create(
 	\
 	\ Pl#Theme#Buffer('nerdtree'
 		\ , ['raw.name', '%{Powerline#Functions#GetShortPath(4)}']
+		\ , Pl#Segment#Truncate()
+		\ , Pl#Segment#Split()
+	\ ),
+	\
+	\ Pl#Theme#Buffer('yankring'
+		\ , ['static_str.name', 'YankRing']
 		\ , Pl#Segment#Truncate()
 		\ , Pl#Segment#Split()
 	\ )
