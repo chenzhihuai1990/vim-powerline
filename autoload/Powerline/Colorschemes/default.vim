@@ -1,3 +1,6 @@
+" TODO 
+" [ ] change color name
+" [ ] color for inactive filetype segment
 call Pl#Hi#Allocate({
 	\ 'black'          : 16,
 	\ 'white'          : 231,
@@ -28,7 +31,7 @@ call Pl#Hi#Allocate({
 	\
 	\ 'gray0'          : 233,
 	\ 'gray1'          : 235,
-	\ 'gray2'          : 236,
+	\ 'gray2'          : [236,0x282a2e],
 	\ 'gray3'          : 239,
 	\ 'gray4'          : 240,
 	\ 'gray5'          : 241,
@@ -37,12 +40,17 @@ call Pl#Hi#Allocate({
 	\ 'gray8'          : 247,
 	\ 'gray9'          : 250,
 	\ 'gray10'         : 252,
+    \ 'base00'         :[233, 0x303030],
+    \ 'base02'         :[233, 0x1c1c1c],
+    \ 'base01'         :[235, 0x262626],
+    \ 'tws'            :[0, 0xdf5f00],
+    \ 'base04'         :[240, 0x373b41],
 	\ })
 
 let g:Powerline#Colorschemes#default#colorscheme = Pl#Colorscheme#Init([
 	\ Pl#Hi#Segments(['SPLIT'], {
 		\ 'n': ['white', 'gray2'],
-		\ 'N': ['white', 'gray0'],
+		\ 'N': ['white', 'base00'],
 		\ 'i': ['white', 'darkestblue'],
 		\ }),
 	\
@@ -55,15 +63,15 @@ let g:Powerline#Colorschemes#default#colorscheme = Pl#Colorscheme#Init([
 		\ }),
 	\
 	\ Pl#Hi#Segments(['branch', 'scrollpercent', 'raw', 'filesize'], {
-		\ 'n': ['gray9', 'gray4'],
-		\ 'N': ['gray4', 'gray1'],
+		\ 'n': ['gray9', 'base04'],
+		\ 'N': ['gray4', 'base01'],
 		\ 'i': ['mediumcyan', 'darkblue'],
 		\ }),
 	\
 	\ Pl#Hi#Segments(['fileinfo', 'filename'], {
-		\ 'n': ['white', 'gray4', ['bold']],
-		\ 'N': ['gray7', 'gray0', ['bold']],
-		\ 'i': ['white', 'darkblue', ['bold']],
+		\ 'n': ['white', 'gray2', ['bold']],
+		\ 'N': ['gray7', 'base00', ['bold']],
+		\ 'i': ['white', 'darkestblue', ['bold']],
 		\ }),
 	\
 	\ Pl#Hi#Segments(['fileinfo.filepath'], {
@@ -73,8 +81,8 @@ let g:Powerline#Colorschemes#default#colorscheme = Pl#Colorscheme#Init([
 		\ }),
 	\
 	\ Pl#Hi#Segments(['static_str'], {
-		\ 'n': ['white', 'gray4'],
-		\ 'N': ['gray7', 'gray1'],
+		\ 'n': ['white', 'base04'],
+		\ 'N': ['gray7', 'base01'],
 		\ 'i': ['white', 'darkblue'],
 		\ }),
 	\
@@ -86,18 +94,24 @@ let g:Powerline#Colorschemes#default#colorscheme = Pl#Colorscheme#Init([
 	\
 	\ Pl#Hi#Segments(['currenttag', 'fullcurrenttag', 'fileformat', 'fileencoding', 'pwd', 'filetype', 'rvm:string', 'rvm:statusline', 'virtualenv:statusline', 'charcode', 'currhigroup'], {
 		\ 'n': ['gray8', 'gray2'],
+		\ 'N': ['gray8', 'base00'],
 		\ 'i': ['mediumcyan', 'darkestblue'],
 		\ }),
 	\
 	\ Pl#Hi#Segments(['lineinfo'], {
 		\ 'n': ['gray2', 'gray10', ['bold']],
-		\ 'N': ['gray7', 'gray1', ['bold']],
+		\ 'N': ['gray7', 'base02', ['bold']],
 		\ 'i': ['darkestcyan', 'mediumcyan', ['bold']],
 		\ }),
 	\
 	\ Pl#Hi#Segments(['errors'], {
 		\ 'n': ['brightestorange', 'gray2', ['bold']],
 		\ 'i': ['brightestorange', 'darkestblue', ['bold']],
+		\ }),
+	\
+	\ Pl#Hi#Segments(['trailing'], {
+		\ 'n': ['black', 'tws'],
+		\ 'i': ['black', 'tws'],
 		\ }),
 	\
 	\ Pl#Hi#Segments(['lineinfo.line.tot'], {
@@ -110,17 +124,17 @@ let g:Powerline#Colorschemes#default#colorscheme = Pl#Colorscheme#Init([
 		\ 'n': ['white', 'brightred', ['bold']],
 		\ }),
 	\
-	\ Pl#Hi#Segments(['gundo:static_str.name', 'command_t:static_str.name'], {
+	\ Pl#Hi#Segments(['gundo:static_str.name', 'command_t:static_str.name','undotree:static_str.name'], {
 		\ 'n': ['white', 'mediumred', ['bold']],
 		\ 'N': ['brightred', 'darkestred', ['bold']],
 		\ }),
 	\
-	\ Pl#Hi#Segments(['gundo:static_str.buffer', 'command_t:raw.line'], {
+	\ Pl#Hi#Segments(['gundo:static_str.buffer', 'command_t:raw.line', 'undotree:static_str.buffer'], {
 		\ 'n': ['white', 'darkred'],
 		\ 'N': ['brightred', 'darkestred'],
 		\ }),
 	\
-	\ Pl#Hi#Segments(['gundo:SPLIT', 'command_t:SPLIT'], {
+	\ Pl#Hi#Segments(['gundo:SPLIT', 'command_t:SPLIT', 'gundo:SPLIT'], {
 		\ 'n': ['white', 'darkred'],
 		\ 'N': ['white', 'darkestred'],
 		\ }),
