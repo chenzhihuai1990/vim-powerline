@@ -12,7 +12,7 @@ let g:Powerline#Themes#default#theme = Pl#Theme#Create(
 		\ , 'rvm:string'
 		\ , 'virtualenv:statusline'
 		\ , 'filetype'
-		\ , 'scrollpercent'
+		\ , 'encoding'
 		\ , 'lineinfo'
         \ , 'whitespace:trailing'
 	\ ),
@@ -57,7 +57,7 @@ let g:Powerline#Themes#default#theme = Pl#Theme#Create(
 		\ , 'filename'
 		\ , Pl#Segment#Truncate()
 		\ , Pl#Segment#Split()
-		\ , 'scrollpercent'
+		\ , 'encoding'
 	\ ),
 	\
 	\ Pl#Theme#Buffer('ft_vimpager'
@@ -65,7 +65,7 @@ let g:Powerline#Themes#default#theme = Pl#Theme#Create(
 		\ , 'filename'
 		\ , Pl#Segment#Truncate()
 		\ , Pl#Segment#Split()
-		\ , 'scrollpercent'
+		\ , 'encoding'
 	\ ),
 	\
 	\ Pl#Theme#Buffer('lustyexplorer'
@@ -80,7 +80,7 @@ let g:Powerline#Themes#default#theme = Pl#Theme#Create(
 		\ , 'filename'
 		\ , Pl#Segment#Truncate()
 		\ , Pl#Segment#Split()
-		\ , 'scrollpercent'
+		\ , 'encoding'
 	\ ),
 	\
 	\ Pl#Theme#Buffer('minibufexplorer'

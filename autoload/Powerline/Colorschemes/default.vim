@@ -62,7 +62,7 @@ let g:Powerline#Colorschemes#default#colorscheme = Pl#Colorscheme#Init([
 		\ 's': ['white', 'gray5', ['bold']],
 		\ }),
 	\
-	\ Pl#Hi#Segments(['branch', 'scrollpercent', 'raw', 'filesize'], {
+	\ Pl#Hi#Segments(['branch', 'encoding', 'raw', 'filesize'], {
 		\ 'n': ['gray9', 'base04'],
 		\ 'N': ['gray4', 'base01'],
 		\ 'i': ['mediumcyan', 'darkblue'],

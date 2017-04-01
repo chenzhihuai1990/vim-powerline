@@ -19,7 +19,7 @@ let g:Powerline#Segments#segments = Pl#Segment#Init([
 	\ Pl#Segment#Create('fileformat'      , '%{winwidth(winnr())>62?&fileformat:""}', Pl#Segment#Modes('!N')),
 	\ Pl#Segment#Create('fileencoding'    , '%{winwidth(winnr())>62?(&fenc == "" ? &enc : &fenc):""}', Pl#Segment#Modes('!N')),
 	\ Pl#Segment#Create('filetype'        , '%{winwidth(winnr())>62?(strlen(&ft) ? &ft : "no ft"):""}'),
-	\ Pl#Segment#Create('scrollpercent'   , '%{winwidth(winnr())>62?(&fenc==""? &enc : &fenc)."[".(&fileformat)."]":""}'),
+	\ Pl#Segment#Create('encoding'   , '%{winwidth(winnr())>62?(&fenc==""? &enc : &fenc)."[".(&fileformat)."]":""}'),
 	\ Pl#Segment#Create('lineinfo',
 		\ Pl#Segment#Create('line.cur'    , '%3p%% $LINE %3l'),
 		\ Pl#Segment#Create('line.tot'    , ':%-2v', Pl#Segment#NoPadding()),
