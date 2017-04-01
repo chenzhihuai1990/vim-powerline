@@ -31,7 +31,7 @@ call Pl#Hi#Allocate({
 	\
 	\ 'gray0'          : 233,
 	\ 'gray1'          : 235,
-	\ 'gray2'          : [236,0x282a2e],
+	\ 'gray2'          : 236,
 	\ 'gray3'          : 239,
 	\ 'gray4'          : 240,
 	\ 'gray5'          : 241,
@@ -40,17 +40,17 @@ call Pl#Hi#Allocate({
 	\ 'gray8'          : 247,
 	\ 'gray9'          : 250,
 	\ 'gray10'         : 252,
-    \ 'base00'         :[233, 0x303030],
-    \ 'base02'         :[233, 0x1c1c1c],
-    \ 'base01'         :[235, 0x262626],
+    \ 'bgGray0'        :[0, 0x1c1c1c],
+    \ 'bgGray1'        :[0, 0x262626],
+	\ 'bgGray2'        :[0, 0x282a2e],
+    \ 'bgGray3'        :[0, 0x303030],
+    \ 'bgGray4'        :[0, 0x373b41],
     \ 'tws'            :[0, 0xdf5f00],
-    \ 'base04'         :[240, 0x373b41],
 	\ })
-
 let g:Powerline#Colorschemes#default#colorscheme = Pl#Colorscheme#Init([
 	\ Pl#Hi#Segments(['SPLIT'], {
-		\ 'n': ['white', 'gray2'],
-		\ 'N': ['white', 'base00'],
+		\ 'n': ['white', 'bgGray2'],
+		\ 'N': ['white', 'bgGray3'],
 		\ 'i': ['white', 'darkestblue'],
 		\ }),
 	\
@@ -63,14 +63,14 @@ let g:Powerline#Colorschemes#default#colorscheme = Pl#Colorscheme#Init([
 		\ }),
 	\
 	\ Pl#Hi#Segments(['branch', 'encoding', 'raw', 'filesize'], {
-		\ 'n': ['gray9', 'base04'],
-		\ 'N': ['gray4', 'base01'],
+		\ 'n': ['gray9', 'bgGray4'],
+		\ 'N': ['gray4', 'bgGray1'],
 		\ 'i': ['mediumcyan', 'darkblue'],
 		\ }),
 	\
 	\ Pl#Hi#Segments(['fileinfo', 'filename'], {
-		\ 'n': ['white', 'gray2', ['bold']],
-		\ 'N': ['gray7', 'base00', ['bold']],
+		\ 'n': ['white', 'bgGray2', ['bold']],
+		\ 'N': ['gray7', 'bgGray3', ['bold']],
 		\ 'i': ['white', 'darkestblue', ['bold']],
 		\ }),
 	\
@@ -81,8 +81,8 @@ let g:Powerline#Colorschemes#default#colorscheme = Pl#Colorscheme#Init([
 		\ }),
 	\
 	\ Pl#Hi#Segments(['static_str'], {
-		\ 'n': ['white', 'base04'],
-		\ 'N': ['gray7', 'base01'],
+		\ 'n': ['white', 'bgGray4'],
+		\ 'N': ['gray7', 'bgGray1'],
 		\ 'i': ['white', 'darkblue'],
 		\ }),
 	\
@@ -93,14 +93,14 @@ let g:Powerline#Colorschemes#default#colorscheme = Pl#Colorscheme#Init([
 		\ }),
 	\
 	\ Pl#Hi#Segments(['currenttag', 'fullcurrenttag', 'fileformat', 'fileencoding', 'pwd', 'filetype', 'rvm:string', 'rvm:statusline', 'virtualenv:statusline', 'charcode', 'currhigroup'], {
-		\ 'n': ['gray8', 'gray2'],
-		\ 'N': ['gray8', 'base00'],
+		\ 'n': ['gray8', 'bgGray2'],
+		\ 'N': ['gray8', 'bgGray3'],
 		\ 'i': ['mediumcyan', 'darkestblue'],
 		\ }),
 	\
 	\ Pl#Hi#Segments(['lineinfo'], {
 		\ 'n': ['gray2', 'gray10', ['bold']],
-		\ 'N': ['gray7', 'base02', ['bold']],
+		\ 'N': ['gray7', 'bgGray0', ['bold']],
 		\ 'i': ['darkestcyan', 'mediumcyan', ['bold']],
 		\ }),
 	\
